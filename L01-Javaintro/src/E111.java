@@ -4,7 +4,7 @@ public class E111 {
         System.out.println(" ^   ^   ----------");
         System.out.println("( ' ' ) / Greetings \\");
         System.out.println("(  -  )<    young    |");
-        System.out.println(" |   |  \\ padawan   /");
+        System.out.println(" |   |  \\  padawan  /");
         System.out.println("(__|__)  ----------");
     }
 }
