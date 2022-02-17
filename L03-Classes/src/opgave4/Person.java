@@ -37,7 +37,6 @@ public class Person {
 
     public double calcyearlySalery() {
         this.yearlySalery = (this.monthlySalery * 12) * 1.025;
-
         return this.yearlySalery;
     }
 
