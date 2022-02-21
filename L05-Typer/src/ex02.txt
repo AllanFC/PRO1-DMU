@@ -1,0 +1,19 @@
+Declarations of local variables:
+int i1;
+char ch1, ch2;
+
+Write down the value of the changed variable:
+ch1 = 'A';
+A
+
+ch2 = '3';
+3
+
+i1 = ch1;
+65 // compileren slår op i unicode og ser A = 65
+
+i1 = 66;
+66
+
+ch2 = (char)i1;
+B // forcer compileren til at slår op i unicode lib og se hvilken char er 66

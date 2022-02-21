@@ -1,0 +1,40 @@
+//Here are some declarations af local variables:
+int i1, i2, a = 4, b = 11, c;
+double d1, d2, r = 4.0, s = 11.0;
+//For each of the following lines write down the value of the changed variable:
+
+i1 = b / a
+2 // hvis det var en double var svaret 2.75
+
+c = (int)(s / r);
+2 //forcer double til int
+
+d1 = b / a;
+2.0 //double = int / int = double
+
+d2 = s / r;
+2.75 //alle tal er defineret som double
+
+d1 = b / r;
+2.75 //double = int / double = double
+
+d2 = 11.0 / 4.0;
+2.75 //double
+
+d1 = 11.0 / a * c;
+5.5 // a = 4, c = 2
+
+i1++;
+3 //i1 = 2 og i++ incrementer med +1
+
+i1 += 4;
+7 //i1 = 3 og + 4 = 7
+
+i1 = b % a;
+3 //% operator returnere rest-værdien
+
+i1 = 3 + 7 * 2;
+17 //basic math
+
+i2 = (3 + 7) * 2;
+20 //basic math
