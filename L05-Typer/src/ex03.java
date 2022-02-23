@@ -23,7 +23,7 @@ public class ex03 {
         System.out.println(ord1.substring(0, 7));
 
         //g
-        System.out.println(ord2.substring(3, 7));
+        System.out.println(ord2.substring(3, 8));
 
         //h
         System.out.println(ord3.substring(ord3.length()/2));
