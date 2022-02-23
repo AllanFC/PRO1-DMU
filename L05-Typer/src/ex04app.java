@@ -6,7 +6,7 @@ public class ex04app {
         System.out.println(name1.getInits());
         System.out.println(name1.getCryptoInits(2));
 
-        ex04 name2 = new ex04("Allan", "Fogsgaard", "Zhristiansen");
+        ex04 name2 = new ex04("Allan", "Fogsgaard", "Christiansen");
         System.out.println(name2.getFullName());
         System.out.println(name2.getUsername());
         System.out.println(name2.getInits());
