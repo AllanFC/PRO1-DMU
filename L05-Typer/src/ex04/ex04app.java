@@ -1,3 +1,5 @@
+package ex04;
+
 public class ex04app {
     public static void main(String[] args) {
         ex04 name1 = new ex04("Allan", "Christiansen");
