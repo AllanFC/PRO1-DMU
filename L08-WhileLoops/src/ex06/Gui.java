@@ -30,11 +30,29 @@ public class Gui extends Application {
 	// ------------------------------------------------------------------------
 
 	private void drawShapes(GraphicsContext gc) {
+		// base axis
+		gc.strokeLine(5, 175, 195, 175);
+		// ending arrow
+		gc.strokeLine(195, 175, 195 - 4, 175 - 4);
+		gc.strokeLine(195, 175, 195 - 4, 175 + 4);
 
-		gc.strokeLine(10, 175, 190, 175);
+		int x = 15;
+		int y = 170;
+		int x2 = x;
+		int y2 = 180;
+		int i = 0;
 
-		while(true){
-			gc.strokeLine(10, 175, 190, 175);
+		while(i < 11){
+			if(i == 0 || i == 5 || i == 10) {
+				gc.strokeLine(x, y - 3, x2, y2 + 3);
+				String s = "" + i;
+				gc.fillText(s, x - 3, y2 + 13);
+			} else {
+				gc.strokeLine(x, y, x2, y2);
+			}
+			x += 17;
+			x2 = x;
+			i++;
 		}
 	}
 }
