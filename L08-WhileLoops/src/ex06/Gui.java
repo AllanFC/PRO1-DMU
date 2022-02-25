@@ -40,9 +40,8 @@ public class Gui extends Application {
 		int y = 170;
 		int x2 = x;
 		int y2 = 180;
-		int i = 0;
 
-		while(i < 11){
+		for(int i = 0; i < 11; i++){
 			if(i == 0 || i == 5 || i == 10) {
 				gc.strokeLine(x, y - 3, x2, y2 + 3);
 				String s = "" + i;
@@ -52,7 +51,6 @@ public class Gui extends Application {
 			}
 			x += 17;
 			x2 = x;
-			i++;
 		}
 	}
 }
