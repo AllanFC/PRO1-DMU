@@ -15,50 +15,52 @@ public class Card {
     }
 
     public String getDescription(){
-        if(notation.length() == 3 && notation.charAt(0) == '1' && notation.charAt(1) == '0') {
-            if(notation.charAt(2) == 'D') {
-                faction = "Diamonds";
-            } else if(notation.charAt(2) == 'H') {
-                faction = "Hearts";
-            } else if(notation.charAt(2) == 'S') {
-                faction = "Spades";
-            } else if(notation.charAt(2) == 'C') {
-                faction = "Clubs";
+        if(notation.length() < 4) {
+            if (notation.length() == 3 && notation.charAt(0) == '1' && notation.charAt(1) == '0') {
+                if (notation.charAt(2) == 'D') {
+                    faction = "Diamonds";
+                } else if (notation.charAt(2) == 'H') {
+                    faction = "Hearts";
+                } else if (notation.charAt(2) == 'S') {
+                    faction = "Spades";
+                } else if (notation.charAt(2) == 'C') {
+                    faction = "Clubs";
+                }
+                card = "10";
+                return card + " of " + faction;
+            } else if (cardNumbers.contains(notation.charAt(0))) {
+                card = "" + notation.charAt(0);
+                if (notation.charAt(1) == 'D') {
+                    faction = "Diamonds";
+                } else if (notation.charAt(1) == 'H') {
+                    faction = "Hearts";
+                } else if (notation.charAt(1) == 'S') {
+                    faction = "Spades";
+                } else if (notation.charAt(1) == 'C') {
+                    faction = "Clubs";
+                }
+                return card + " of " + faction;
+            } else if (cardLetters.contains(notation.charAt(0))) {
+                if (notation.charAt(0) == 'A') {
+                    card = "Ace";
+                } else if (notation.charAt(0) == 'J') {
+                    card = "Jack";
+                } else if (notation.charAt(0) == 'Q') {
+                    card = "Queen";
+                } else if (notation.charAt(0) == 'K') {
+                    card = "King";
+                }
+                if (notation.charAt(1) == 'D') {
+                    faction = "Diamonds";
+                } else if (notation.charAt(1) == 'H') {
+                    faction = "Hearts";
+                } else if (notation.charAt(1) == 'S') {
+                    faction = "Spades";
+                } else if (notation.charAt(1) == 'C') {
+                    faction = "Clubs";
+                }
+                return card + " of " + faction;
             }
-            card = "10";
-            return card + " of " + faction;
-        } else if(cardNumbers.contains(notation.charAt(0))) {
-            card = "" + notation.charAt(0);
-            if(notation.charAt(1) == 'D') {
-                faction = "Diamonds";
-            } else if(notation.charAt(1) == 'H') {
-                faction = "Hearts";
-            } else if(notation.charAt(1) == 'S') {
-                faction = "Spades";
-            } else if(notation.charAt(1) == 'C') {
-                faction = "Clubs";
-            }
-            return card + " of " + faction;
-        } else if(cardLetters.contains(notation.charAt(0))) {
-            if(notation.charAt(0) == 'A') {
-                card = "Ace";
-            } else if(notation.charAt(0) == 'J') {
-                card = "Jack";
-            } else if(notation.charAt(0) == 'Q') {
-                card = "Queen";
-            } else if(notation.charAt(0) == 'K') {
-                card = "King";
-            }
-            if(notation.charAt(1) == 'D') {
-                faction = "Diamonds";
-            } else if(notation.charAt(1) == 'H') {
-                faction = "Hearts";
-            } else if(notation.charAt(1) == 'S') {
-                faction = "Spades";
-            } else if(notation.charAt(1) == 'C') {
-                faction = "Clubs";
-            }
-            return card + " of " + faction;
         }
 
         return "Unknown";
