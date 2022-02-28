@@ -14,7 +14,7 @@ public class Gui extends Application {
 		GridPane root = this.initContent();
 		Scene scene = new Scene(root);
 
-		stage.setTitle("Exercise 5");
+		stage.setTitle("Exercise 7");
 		stage.setScene(scene);
 		stage.show();
 	}
