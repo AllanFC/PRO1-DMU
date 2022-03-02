@@ -42,7 +42,7 @@ public class Gui extends Application {
 		int y2 = 180;
 
 		for(int i = 0; i < 11; i++){
-			if(i == 0 || i == 5 || i == 10) {
+			if(i % 5 == 0) {
 				gc.strokeLine(x, y - 3, x2, y2 + 3);
 				String s = "" + i;
 				gc.fillText(s, x - 3, y2 + 13);

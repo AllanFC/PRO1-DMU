@@ -6,7 +6,7 @@ public class App
     {
         Stars stars = new Stars();
 
-        stars.starExD(19);
+        stars.starExD(10);
         System.out.println();
     }
 }
