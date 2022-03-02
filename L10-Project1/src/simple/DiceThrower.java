@@ -4,7 +4,6 @@ public class DiceThrower {
 	// 2 dice with face count of 6 each
 	private Die die1, die2;
 
-	// TODO: Add fields.
 	// Fields:
 	// 1. The roll count.
 	private int rollCount;
@@ -22,7 +21,6 @@ public class DiceThrower {
 	/**
 	 * Creates a DiceThrower object.
 	 */
-	// TODO: Make a constructor that initialises all fields.
 	public DiceThrower(){
 		die1 = new Die();
 		die2 = new Die();
@@ -32,7 +30,6 @@ public class DiceThrower {
 		sameValueCount = 0;
 		maxValueRolled = 0;
 	}
-	// TODO: Add get methods for the fields.
 
 	public int getSixCount() {
 		return sixCount;
@@ -58,7 +55,6 @@ public class DiceThrower {
 	 * Rolls the 2 dice.
 	 */
 	public void roll() {
-		// TODO: Roll the 2 dice.
 		die1.roll();
 		die2.roll();
 		totalSum += sum();
@@ -81,7 +77,6 @@ public class DiceThrower {
 	 * Returns the sum of the face values in a roll.
 	 */
 	public int sum() {
-		// TODO
 		return die1.getFaceValue() + die2.getFaceValue();
 	}
 
@@ -90,7 +85,6 @@ public class DiceThrower {
 	 * Example: Returns "(4,5)" for a roll of 4 and 5.
 	 */
 	public String rollDescription() {
-		// TODO: Use the method: String.format().
 		return String.format("(%d, %d)", die1.getFaceValue(), die2.getFaceValue());
 	}
 }

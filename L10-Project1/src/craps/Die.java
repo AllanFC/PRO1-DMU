@@ -8,11 +8,12 @@ public class Die {
 	// value of upper face
 	private int faceValue;
 
+	private Random rd = new Random();
+
 	/**
 	 * Creates a die with the given face count and a random face value.
 	 */
 	public Die(int faceCount) {
-		// TODO
 		// Remember to initialise all fields.
 		this.faceCount = faceCount;
 		faceValue = 0;
@@ -21,14 +22,11 @@ public class Die {
 	/**
 	 * Creates a die with 6 faces and a random face value.
 	 */
-	// TODO: Make another constructor
 	public Die() {
-		Random rd = new Random();
 		faceCount = 6;
 		faceValue = rd.nextInt(6) + 1;
 	}
 
-	// TODO: make getters
 	public int getFaceValue() {
 		return faceValue;
 	}
@@ -42,7 +40,6 @@ public class Die {
 	 */
 	public void roll() {
 		// TODO
-		Random rd = new Random();
-		faceValue = rd.nextInt( faceCount) + 1 ;
+		faceValue = rd.nextInt( faceCount) + 1;
 	}
 }
