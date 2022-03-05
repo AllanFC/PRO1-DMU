@@ -23,8 +23,6 @@ public class CrapsGame {
             System.out.println(thrower.rollDescription());
 
 
-
-
             if(thrower.getRollCount() == 1) {
                 if(thrower.sum() == 7 || thrower.sum() == 11){
                     printGameWon();
