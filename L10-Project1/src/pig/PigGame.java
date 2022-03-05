@@ -1,8 +1,5 @@
 package pig;
 
-import craps.DiceThrower;
-
-import javax.swing.plaf.ColorUIResource;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -15,7 +12,7 @@ public class PigGame {
         DiceThrower thrower = new DiceThrower();
         Random rd = new Random();
         int currentPoints = 0;
-        int goal = 50;
+        int goal = 100;
         boolean turn;
         boolean finished = false;
 
@@ -42,6 +39,7 @@ public class PigGame {
                 } else {
                     currentPoints = 0;
                     turn = false;
+                    getScore();
                 }
             }
             if(!turn){
@@ -57,15 +55,24 @@ public class PigGame {
                 } else{
                     currentPoints = 0;
                     turn = true;
+                    getScore();
                 }
             }
 
             if(!finished){
-                System.out.println("Roll again? (Y/n) ");
+                if(thrower.sum() > 1) {
+                    System.out.println("Roll again? (Y/n) ");
+                }
                 String answer = scanner.nextLine();
                 if (answer.equalsIgnoreCase("n")) {
+                    if(turn){
+                        player1.updatePlayerPoints(currentPoints);
+                    } else {
+                        player2.updatePlayerPoints(currentPoints);
+                    }
                     turn = !turn;
                     currentPoints = 0;
+                    getScore();
                 }
             }
         }

@@ -14,10 +14,9 @@ public class Die {
 	 * Creates a die with the given face count and a random face value.
 	 */
 	public Die(int faceCount) {
-		// TODO
 		// Remember to initialise all fields.
 		this.faceCount = faceCount;
-		faceValue = rd.nextInt(6) + 1;
+		faceValue = rd.nextInt(faceCount) + 1;
 	}
 
 	/**
@@ -29,7 +28,6 @@ public class Die {
 		faceValue = rd.nextInt(6) + 1;
 	}
 
-	// TODO: make getters
 	public int getFaceValue() {
 		return faceValue;
 	}
@@ -42,6 +40,6 @@ public class Die {
 	 * Rolls the die, resulting in a new face value.
 	 */
 	public void roll() {
-		faceValue = rd.nextInt( faceCount) + 1 ;
+		faceValue = rd.nextInt(faceCount) + 1 ;
 	}
 }

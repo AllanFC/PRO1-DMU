@@ -9,7 +9,7 @@ public class Player {
         playerPoints = 0;
     }
 
-    public void setPlayerPoints(int playerPoints) {
+    public void updatePlayerPoints(int playerPoints) {
         this.playerPoints += playerPoints;
     }
 
