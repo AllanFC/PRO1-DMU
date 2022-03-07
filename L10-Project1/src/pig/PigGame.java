@@ -4,8 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class PigGame {
-    Player player1 = new Player("Player1");
-    Player player2 = new Player("Player2");
+    private Player player1 = new Player("Player1");
+    private Player player2 = new Player("Player2");
 
     public void play(){
         Scanner scanner = new Scanner(System.in);
@@ -18,9 +18,9 @@ public class PigGame {
 
 
         if(rd.nextInt(2) == 0){
-            turn = true;
+            turn = true; //player 1 starts
         } else {
-            turn = false;
+            turn = false; //player 2 starts
         }
 
         while(!finished){
@@ -35,13 +35,13 @@ public class PigGame {
                         printGameWon(player1.getPlayerName());
                         finished = true;
                     }
-
                 } else {
                     currentPoints = 0;
                     turn = false;
                     getScore();
                 }
             }
+
             if(!turn){
                 thrower.roll();
                 System.out.println(player2.getPlayerName() + " Rolled " + thrower.sum());
