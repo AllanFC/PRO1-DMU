@@ -52,14 +52,14 @@ public class CrapsGame {
      * Prints a 'You have won' message.
      */
     public void printGameWon() {
-        System.out.println("You won! RNGjesus would be proud");
+        System.out.println("You won! Congratz");
     }
 
     /**
      * Prints a 'You have lost' message.
      */
     public void printGameLost() {
-        System.out.println("You lost to RNGjesus");
+        System.out.println("You lost! Too bad");
     }
 
     /**

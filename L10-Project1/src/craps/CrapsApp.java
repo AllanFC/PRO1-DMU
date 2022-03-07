@@ -1,6 +1,5 @@
 package craps;
 
-import simple.SimpleGame;
 
 public class CrapsApp {
 
