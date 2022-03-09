@@ -1,6 +1,5 @@
 package ex6student;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class TestChild {
@@ -17,6 +16,8 @@ public class TestChild {
         for(double e : weight){
             b1.addWeight(e);
         }
+        System.out.println(b1.getWeightAtAge(2));
+
         System.out.println(Arrays.toString(b1.getWeights()));
         System.out.printf("%.1f", b1.maxYearlyWeightGain());
     }

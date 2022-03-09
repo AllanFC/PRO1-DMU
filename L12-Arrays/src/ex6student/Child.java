@@ -23,6 +23,10 @@ public class Child {
         return this.weightsCount;
     }
 
+    public double getWeightAtAge(int age){
+        return weights[age - 1];
+    }
+
     public void addWeight(double weight){
         weights[weightsCount] = weight;
         weightsCount++;
