@@ -7,6 +7,10 @@ public class Sequence {
         values = new int[size];
     }
 
+    public Sequence(int[] array) {
+        values = array;
+    }
+
     public void set(int i, int n) {
         values[i] = n;
     }
@@ -43,6 +47,27 @@ public class Sequence {
             }
         }
         return true;
+    }
+
+    public boolean isPermutationOf(Sequence other){
+        if(values.length != other.values.length){
+            return false;
+        }
+        int sum = 0, sum1 = 0;
+        int multi = 1, multi1 = 1;
+
+        for (int value : values) {
+            sum += value;
+            multi *= value;
+        }
+        for(int value : other.values){
+            sum1 += value;
+            multi1 *= value;
+        }
+        if(sum == sum1 && multi == multi1){
+            return true;
+        }
+        return false;
     }
 
 }
