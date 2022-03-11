@@ -35,7 +35,7 @@ public class Student {
     }
 
     public double gradeAverage(){
-        int sum = 0;
+        double sum = 0;
         for(double e : grades){
             sum += e;
         }

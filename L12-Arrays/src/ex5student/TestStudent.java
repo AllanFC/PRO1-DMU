@@ -22,9 +22,9 @@ public class TestStudent {
             s2.addGrade(grades[rand]);
         }
 
-        System.out.println(s1.gradeAverage());
-        System.out.println(s1.maxGrade());
-        System.out.println(s1.minGrade());
+        System.out.printf("Average: %.1f %n", s1.gradeAverage());
+        System.out.println("Maximum: " + s1.maxGrade());
+        System.out.println("Minimum: " + s1.minGrade());
         System.out.println(Arrays.toString(s1.getActualGrades()));
 
         System.out.println(s2.gradeAverage());
