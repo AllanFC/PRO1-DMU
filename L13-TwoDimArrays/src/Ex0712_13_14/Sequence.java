@@ -33,7 +33,7 @@ public class Sequence {
     }
 
     public boolean sameValues(Sequence other){
-        boolean found = false;
+        boolean found;
         for(int i = 0; i < values.length; i++){
             found = false;
             for(int j = 0; j < other.values.length; j++){

@@ -3,13 +3,16 @@ import java.util.Arrays;
 public class Ex07 {
     public static void main(String[] args) {
         int[] testArray = {2, 7, 6, 1, 9, 3, 4};
+        int[] testArray1 = {2, 7, 6, 1, 9, 3, 4};
+        int[] testArray2 = {2, 7, 6, 1, 9, 3, 4};
+        int[] testArray3 = {2, 7, 6, 1, 9, 3, 4};
         System.out.println();
         System.out.println("Switch first and last:");
         System.out.println(switchFirstLast(testArray));
 
         System.out.println();
         System.out.println("Replace even numbers with zero:");
-        System.out.println(evenToZero(testArray));
+        System.out.println(evenToZero(testArray1));
 
         System.out.println();
         System.out.println("Get second highest number:");
@@ -21,7 +24,7 @@ public class Ex07 {
 
         System.out.println();
         System.out.println("Array shift to the right:");
-        System.out.println(shiftToRight(testArray));
+        System.out.println(shiftToRight(testArray2));
 
         System.out.println();
         System.out.println("Does this array have doublets:");
