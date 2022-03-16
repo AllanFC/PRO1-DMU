@@ -17,11 +17,11 @@ public class Exercise01 {
         System.out.println(names);
 
         for(int i = 0; i < names.size(); i++){
-            System.out.println(names.get(i).length());
+            System.out.print(names.get(i).length());
         }
         System.out.println();
         for(String e : names){
-            System.out.println(e.length());
+            System.out.print(e.length());
         }
     }
 }

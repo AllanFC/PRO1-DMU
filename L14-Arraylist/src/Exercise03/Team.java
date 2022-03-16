@@ -67,8 +67,9 @@ public class Team {
 
     public ArrayList<String> bestPlayerNames(){
         ArrayList<String> bestPlayers = new ArrayList<>();
+        int maxScore = maxScore();
         for(Player e : players){
-            if(e.getScore() == maxScore()){
+            if(e.getScore() == maxScore){
                 bestPlayers.add(e.getName());
             }
         }
