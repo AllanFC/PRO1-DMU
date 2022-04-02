@@ -69,7 +69,6 @@ public class YatzyGui extends Application {
         dicePane.setStyle("-fx-border-color: black");
 
         // add txfValues, chbHolds, lblRolled and btnRoll
-        // TODO
         for (int i = 0; i < txfValues.length; i++) {
             TextField txf = new TextField();
             dicePane.add(txf, i, 0);
@@ -169,7 +168,6 @@ public class YatzyGui extends Application {
 
     // Create an action method for btnRoll's action.
     // Hint: Create small helper methods to be used in the action method.
-    // TODO
     private boolean[] holds(){
         boolean[] holds = new boolean[5];
         for(int i = 0; i < cbxHolds.length; i++){
@@ -218,7 +216,6 @@ public class YatzyGui extends Application {
 
     // Create a method for mouse click on one of the text fields in txfResults.
     // Hint: Create small helper methods to be used in the mouse click method.
-    // TODO
     private void resetTxf(){
         for(int i = 0; i < txfResults.length; i++){
             if(txfResults[i].getUserData() != "Locked") {
