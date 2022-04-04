@@ -1,18 +1,17 @@
 package YatzyStudent.gui;
 
+import YatzyStudent.model.YatzyDice;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import YatzyStudent.model.YatzyDice;
 
-import java.lang.reflect.Method;
+
 
 public class YatzyGui extends Application {
     private YatzyDice dice = new YatzyDice();
