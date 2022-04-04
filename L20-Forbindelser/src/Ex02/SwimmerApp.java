@@ -46,7 +46,7 @@ public class SwimmerApp {
         for(Swimmer e : plan2.getSwimmers()){
             System.out.println(e.getName() + "'s bedste tid: " + e.bestLapTime());
             System.out.printf("%s bruger %d timer i vandet og %d timer på styrketræning \n", e.getName(),
-                    plan1.getWeeklyWaterHours(), plan1.getWeeklyStrengthHours());
+                    plan2.getWeeklyWaterHours(), plan2.getWeeklyStrengthHours());
             System.out.printf("%s bruger samlet %d på træning om ugen \n", e.getName(), plan2.getWeeklyWaterHours() + plan2.getWeeklyStrengthHours());
         }
     }
