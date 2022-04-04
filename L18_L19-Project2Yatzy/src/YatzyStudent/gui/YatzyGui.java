@@ -69,7 +69,7 @@ public class YatzyGui extends Application {
 
         // add txfValues, chbHolds, lblRolled and btnRoll
         for (int i = 0; i < txfValues.length; i++) {
-            TextField txf = new TextField();
+            TextField txf = new TextField(""+(i+1));
             dicePane.add(txf, i, 0);
             txf.setPrefWidth(70);
             txf.setPrefHeight(70);
@@ -206,7 +206,7 @@ public class YatzyGui extends Application {
             rollbtn.setText("Pick result");
             updateTxfResults();
         } else {
-            rollbtn.setText("Throw " + throwCount);
+            rollbtn.setText("Throw " + (throwCount + 1));
         }
 
     }
@@ -258,7 +258,12 @@ public class YatzyGui extends Application {
 
     private void mouseClickedCbx(MouseEvent event) {
         CheckBox cbx = (CheckBox) event.getSource();
-        cbx.setDisable(true);
+        if(dice.getThrowCount() > 0){
+            cbx.setDisable(true);
+        } else{
+            cbx.setSelected(false);
+        }
+
 
     }
 
@@ -274,7 +279,7 @@ public class YatzyGui extends Application {
                 resetCbx();
                 dice.resetThrowCount();
                 rollbtn.setDisable(false);
-                rollbtn.setText("Throw " + dice.getThrowCount());
+                rollbtn.setText("Throw " + (dice.getThrowCount() + 1));
             }else {
                 done();
             }
