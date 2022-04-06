@@ -27,7 +27,7 @@ public class TrainingPlan {
 
     /*-----------------------------------------------------------------------*/
 
-    private ArrayList<Swimmer> Swimmers = new ArrayList<>();
+    private final ArrayList<Swimmer> Swimmers = new ArrayList<>();
 
     public ArrayList<Swimmer> getSwimmers() {
         return new ArrayList<>(Swimmers);
@@ -37,11 +37,6 @@ public class TrainingPlan {
         Swimmer person = new Swimmer(name, laptimes);
         Swimmers.add(person);
         return person;
-    }
-
-    /** Pre: The Swimmer is not connected to a TrainingPlan. */
-    public void addSwimmer(Swimmer person) {
-        Swimmers.add(person);
     }
 
 }
