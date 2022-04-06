@@ -32,8 +32,12 @@ public class Rental{
         return days;
     }
 
+    /**
+     *
+     * Pre: skal have mindst en car/rental
+     */
     public int getPrice(){
-        return cars.get(0).getPricePerDay() * days;
+        return cars.get(cars.get(0).getRentals().indexOf(this)).getPricePerDay() * days;
     }
 
     // association 0..* ---- 0..*

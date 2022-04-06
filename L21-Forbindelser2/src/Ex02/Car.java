@@ -1,6 +1,7 @@
 package Ex02;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Car {
     private String no; //registration number
@@ -34,5 +35,16 @@ public class Car {
 
     public ArrayList<Rental> getRentals(){
         return new ArrayList<>(rentals);
+    }
+
+    public int longestRental(){
+        ArrayList<Rental> rentals = getRentals();
+        int longestRent = 0;
+        for(Rental e : rentals){
+            if(e.getDays()>longestRent){
+                longestRent = e.getDays();
+            }
+        }
+        return longestRent;
     }
 }

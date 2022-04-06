@@ -14,5 +14,8 @@ public class TestApp {
 
         System.out.println(rent1.getPrice());
         System.out.println(rent2.getPrice());
+
+        System.out.println("Car1 longest rental: " + car1.longestRental());
+        System.out.println("Car2 longest rental: " + car2.longestRental());
     }
 }
