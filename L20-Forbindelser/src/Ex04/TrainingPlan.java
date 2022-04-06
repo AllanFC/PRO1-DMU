@@ -27,7 +27,7 @@ public class TrainingPlan {
 
     /*-----------------------------------------------------------------------*/
 
-    private final ArrayList<Swimmer> Swimmers = new ArrayList<>();
+    private ArrayList<Swimmer> Swimmers = new ArrayList<>();
 
     public ArrayList<Swimmer> getSwimmers() {
         return new ArrayList<>(Swimmers);
