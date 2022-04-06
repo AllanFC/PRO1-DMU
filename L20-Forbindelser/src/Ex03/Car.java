@@ -7,7 +7,7 @@ public class Car {
 
     public Car(String no, String year){
         this.no = no;
-        this.year = year; sdgsadfg
+        this.year = year;
         pricePerDay = 0;
     }
 
