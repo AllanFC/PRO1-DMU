@@ -34,12 +34,15 @@ public class SwimmerApp {
         bo.setTrainingPlan(plan1);
         mikkel.setTrainingPlan(plan2);
 
+        int sum = 0;
         for (Swimmer s : swimmers) {
             System.out.println(s.getName() + "'s bedste tid: " + s.bestLapTime());
             System.out.printf("%s bruger %d timer i vandet og %d timer på styrketræning \n", s.getName(),
                     s.getTrainingPlan().getWeeklyWaterHours(), s.getTrainingPlan().getWeeklyStrengthHours());
             System.out.printf("%s bruger samlet %d på træning om ugen \n", s.getName(), s.allTrainingHours());
+            sum += s.allTrainingHours();
         }
+        System.out.println("Samlet antal timer svømmerne træner om ugen: " + sum);
 
     }
 }
