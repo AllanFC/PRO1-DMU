@@ -6,9 +6,9 @@ public class TestApp {
         Person p2 = new Person("Dandylion", 22);
 
         Gift g1 = new Gift("Sweater", 200.0, p1);
-        g1.addReceiver(p2);
+        p2.addReceiver(g1);
         Gift g2 = new Gift("Socks", 30.0, p1);
-        g2.addReceiver(p2);
+        p2.addReceiver(g2);
 
         System.out.println(p1.getName() + " Received gifts from: " + p1.giftsReceivedFrom());
         System.out.println(p2.getName() + " Received gifts from: " + p2.giftsReceivedFrom());

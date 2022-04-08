@@ -5,8 +5,7 @@ import java.util.ArrayList;
 public class Person {
     private String name;
     private int age;
-    final ArrayList<Gift> giftsReceived = new ArrayList<>();
-    final ArrayList<Gift> giftsGiven = new ArrayList<>();
+    private final ArrayList<Gift> giftsReceived = new ArrayList<>();
 
     public Person(String name, int age){
         this.name = name;
@@ -47,5 +46,13 @@ public class Person {
             givers.add(e.getGiver());
         }
         return givers;
+    }
+
+    /**
+     *
+     * Pre: This does not have another receiver
+     */
+    public void addReceiver(Gift gift) {
+        giftsReceived.add(gift);
     }
 }

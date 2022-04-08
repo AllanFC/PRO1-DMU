@@ -10,7 +10,6 @@ public class Gift {
         this.description = description;
         this.price = price;
         this.giver = giver;
-        giver.giftsGiven.add(this);
     }
 
     public String getDescription() {
@@ -23,15 +22,6 @@ public class Gift {
 
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    /**
-     *
-     * Pre: This does not have another receiver
-     */
-    public void addReceiver(Person receiver) {
-        this.receiver = receiver;
-        receiver.giftsReceived.add(this);
     }
 
     public Person getGiver() {
