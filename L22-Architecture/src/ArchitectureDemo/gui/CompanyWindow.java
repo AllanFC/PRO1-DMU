@@ -1,6 +1,6 @@
-package Architecture1stSem.gui;
+package ArchitectureDemo.gui;
 
-import Architecture1stSem.controller.Controller;
+import ArchitectureDemo.controller.Controller;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -11,7 +11,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import Architecture1stSem.model.Company;
+import ArchitectureDemo.model.Company;
 
 public class CompanyWindow extends Stage {
     private final Company company; // nullable

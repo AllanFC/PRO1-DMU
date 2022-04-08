@@ -1,9 +1,9 @@
-package Architecture1stSem.gui;
+package ArchitectureDemo.gui;
 
-import controller.Controller;
+import ArchitectureDemo.controller.Controller;
 import javafx.application.Application;
-import model.Company;
-import model.Employee;
+import ArchitectureDemo.model.Company;
+import ArchitectureDemo.model.Employee;
 
 public class ArchitectureApp {
 

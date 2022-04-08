@@ -1,6 +1,7 @@
-package Architecture1stSem.gui;
+package Ex01.gui;
 
-import Architecture1stSem.controller.Controller;
+import Ex01.controller.Controller;
+import Ex01.model.Employee;
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -8,7 +9,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import Architecture1stSem.model.Employee;
 
 import java.util.Optional;
 
@@ -17,6 +17,7 @@ public class EmployeePane extends GridPane {
     private final TextField txfWage = new TextField();
     private final TextField txfCompany = new TextField();
     private final TextField txfSalary = new TextField();
+    private final TextField txfEmploymentYear = new TextField();
     private final ListView<Employee> lvwEmployees = new ListView<>();
 
     public EmployeePane() {
@@ -28,7 +29,7 @@ public class EmployeePane extends GridPane {
         Label lblComp = new Label("Employees");
         this.add(lblComp, 0, 0);
 
-        this.add(lvwEmployees, 0, 1, 1, 5);
+        this.add(lvwEmployees, 0, 1, 1, 6);
         lvwEmployees.setPrefWidth(200);
         lvwEmployees.setPrefHeight(200);
         ChangeListener<Employee> listener = (ov, o, n) -> this.selectedEmployeeChanged();
@@ -59,8 +60,14 @@ public class EmployeePane extends GridPane {
         this.add(txfSalary, 2, 4);
         txfSalary.setEditable(false);
 
+        Label lblEmploymentYear = new Label("Employment year:");
+        this.add(lblEmploymentYear, 1, 5);
+
+        this.add(txfEmploymentYear, 2, 5);
+        txfEmploymentYear.setEditable(false);
+
         HBox hbxButtons = new HBox(40);
-        this.add(hbxButtons, 0, 6, 3, 1);
+        this.add(hbxButtons, 0, 7, 3, 1);
         hbxButtons.setPadding(new Insets(10, 0, 0, 0));
         hbxButtons.setAlignment(Pos.BASELINE_CENTER);
 
@@ -146,11 +153,17 @@ public class EmployeePane extends GridPane {
                 txfCompany.clear();
                 txfSalary.clear();
             }
+            if(employee.getEmploymentYear() > 0 && employee.getCompany() != null){
+                txfEmploymentYear.setText("" + employee.getEmploymentYear());
+            } else {
+                txfEmploymentYear.clear();
+            }
         } else {
             txfName.clear();
             txfWage.clear();
             txfCompany.clear();
             txfSalary.clear();
+            txfEmploymentYear.clear();
         }
     }
 }

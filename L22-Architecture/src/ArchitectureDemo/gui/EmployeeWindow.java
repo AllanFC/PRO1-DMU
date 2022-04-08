@@ -1,6 +1,6 @@
-package Architecture1stSem.gui;
+package ArchitectureDemo.gui;
 
-import Architecture1stSem.controller.Controller;
+import ArchitectureDemo.controller.Controller;
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
@@ -10,8 +10,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import Architecture1stSem.model.Company;
-import Architecture1stSem.model.Employee;
+import ArchitectureDemo.model.Company;
+import ArchitectureDemo.model.Employee;
 
 public class EmployeeWindow extends Stage {
     private final Employee employee; // nullable

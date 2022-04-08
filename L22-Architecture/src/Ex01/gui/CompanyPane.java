@@ -1,6 +1,8 @@
-package Architecture1stSem.gui;
+package Ex01.gui;
 
-import Architecture1stSem.controller.Controller;
+import Ex01.controller.Controller;
+import Ex01.model.Company;
+import Ex01.model.Employee;
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -9,8 +11,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import Architecture1stSem.model.Company;
-import Architecture1stSem.model.Employee;
 
 import java.util.Optional;
 

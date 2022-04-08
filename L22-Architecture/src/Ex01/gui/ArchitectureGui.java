@@ -1,6 +1,5 @@
-package Architecture1stSem.gui;
+package Ex01.gui;
 
-import Architecture1stSem.controller.Controller;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;

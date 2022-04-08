@@ -1,16 +1,18 @@
-package Architecture1stSem.model;
+package Ex01.model;
 
 public class Employee {
     private String name;
     private int wage; // hourly wage
+    private int employmentYear;
 
     // association 0..* --> 0..1 Company
     Company company; // nullable, OBS: package visible
 
     /** Pre: name not empty, wage >= 0. */
-    public Employee(String name, int wage) {
+    public Employee(String name, int wage, int employmentYear) {
         this.name = name;
         this.wage = wage;
+        this.employmentYear = employmentYear;
     }
 
     public String getName() {
@@ -29,6 +31,14 @@ public class Employee {
     /** Pre: wage >= 0. */
     public void setWage(int wage) {
         this.wage = wage;
+    }
+
+    public void setEmploymentYear(int employmentYear) {
+        this.employmentYear = employmentYear;
+    }
+
+    public int getEmploymentYear() {
+        return employmentYear;
     }
 
     @Override

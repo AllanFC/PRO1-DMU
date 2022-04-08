@@ -1,9 +1,9 @@
-package Architecture1stSem.storage;
+package ArchitectureDemo.storage;
 
 import java.util.ArrayList;
 
-import model.Company;
-import model.Employee;
+import ArchitectureDemo.model.Company;
+import ArchitectureDemo.model.Employee;
 
 public class Storage {
     private static final ArrayList<Company> companies = new ArrayList<>();

@@ -1,8 +1,8 @@
-package Architecture1stSem.controller;
+package Ex01.controller;
 
-import Architecture1stSem.model.Company;
-import Architecture1stSem.model.Employee;
-import Architecture1stSem.storage.Storage;
+import Ex01.model.Company;
+import Ex01.model.Employee;
+import Ex01.storage.Storage;
 
 import java.util.ArrayList;
 
@@ -45,8 +45,8 @@ public class Controller {
      * Create a new employee.
      * Pre: name not empty, wage >= 0.
      */
-    public static Employee createEmployee(String name, int wage) {
-        Employee employee = new Employee(name, wage);
+    public static Employee createEmployee(String name, int wage, int employmentYear) {
+        Employee employee = new Employee(name, wage, employmentYear);
         Storage.storeEmployee(employee);
         return employee;
     }
@@ -65,9 +65,13 @@ public class Controller {
      * Update the employee.
      * Pre: wage >= 0.
      */
-    public static void updateEmployee(Employee employee, String name, int wage) {
+    public static void updateEmployee(Employee employee, String name, int wage, int employmentYear) {
         employee.setName(name);
         employee.setWage(wage);
+        if(employee.getCompany() != null && employmentYear > 0){
+            employee.setEmploymentYear(employmentYear);
+        }
+
     }
 
     public static ArrayList<Employee> getEmployees() {
