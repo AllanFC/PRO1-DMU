@@ -1,8 +1,9 @@
-package Ex01.controller;
+package Ex02.controller;
 
-import Ex01.model.Company;
-import Ex01.model.Employee;
-import Ex01.storage.Storage;
+import Ex02.model.Company;
+import Ex02.model.Customer;
+import Ex02.model.Employee;
+import Ex02.storage.Storage;
 
 import java.util.ArrayList;
 
@@ -85,7 +86,7 @@ public class Controller {
      * If the employee is connected to another company, this connected is removed.
      */
     public static void addEmployeeToCompany(Employee employee, Company company) {
-        Company oldCompany = employee.getCompany();
+        var oldCompany = employee.getCompany();
         if (oldCompany != null)
             oldCompany.removeEmployee(employee);
         company.addEmployee(employee);
@@ -98,5 +99,38 @@ public class Controller {
         var company = employee.getCompany();
         if (company != null)
             company.removeEmployee(employee);
+    }
+
+
+    // -------------------------------------------------------------------------
+    /**
+     * Create a new customer.
+     */
+    public static Customer createCustomer(String name) {
+        Customer customer = new Customer(name);
+        Storage.storeCustomer(customer);
+        return customer;
+    }
+
+    /**
+     * Delete the customer.
+     */
+    public static void deleteCustomer(Customer customer) {
+        Storage.deleteCustomer(customer);
+    }
+
+    /**
+     * Add the employee to the company.
+     * If the employee is connected to another company, this connected is removed.
+     */
+    public static void addCustomerToCompany(Customer customer, Company company) {
+        company.addCustomer(customer);
+    }
+
+    /**
+     * Remove the employee's company, if the employee has a company.
+     */
+    public static void removeCompanyOfCustomer(Customer customer, Company company) {
+        company.removeCustomer(customer);
     }
 }
