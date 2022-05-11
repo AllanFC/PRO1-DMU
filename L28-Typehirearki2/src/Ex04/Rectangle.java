@@ -1,6 +1,6 @@
 package Ex04;
 
-public class Rectangle extends Figur{
+public class Rectangle extends shape {
     private int side1;
     private int side2;
 

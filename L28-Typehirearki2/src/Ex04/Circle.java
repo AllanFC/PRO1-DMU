@@ -1,7 +1,7 @@
 package Ex04;
 
 
-public class Circle extends Figur{
+public class Circle extends shape {
     private int radius;
 
     public Circle(int xPos, int yPos, int radius){

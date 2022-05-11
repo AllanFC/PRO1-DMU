@@ -1,42 +1,41 @@
 package Ex04;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
-        ArrayList<Figur> figurs = new ArrayList<>(List.of(
+        ArrayList<shape> shapes = new ArrayList<>(List.of(
                 new Circle(10, 10, 10),
                 new Eclipse(30, 30, 20, 10),
                 new Square(70, 70, 10),
                 new Rectangle(100, 100, 10, 20)));
 
-        figursToString(figurs);
+        figursToString(shapes);
         System.out.println();
-        System.out.printf("Total area: %.2f\n", calcTotalArea(figurs));
-        parallelShift(figurs, 10);
-        figursToString(figurs);
+        System.out.printf("Total area: %.2f\n", calcTotalArea(shapes));
+        parallelShift(shapes, 10);
+        figursToString(shapes);
 
     }
 
-    public static void figursToString(ArrayList<Figur> figurs){
-        for(Figur e : figurs){
+    public static void figursToString(ArrayList<shape> shapes){
+        for(shape e : shapes){
             System.out.println(e.toString());
             System.out.printf("  Area: %.2f\n",e.area());
         }
     }
 
-    public static double calcTotalArea(ArrayList<Figur> figurs){
+    public static double calcTotalArea(ArrayList<shape> shapes){
         double sum = 0;
-        for(Figur e : figurs){
+        for(shape e : shapes){
             sum += e.area();
         }
         return sum;
     }
 
-    public static void parallelShift(ArrayList<Figur> figurs, int amount){
-        for(Figur e : figurs){
+    public static void parallelShift(ArrayList<shape> shapes, int amount){
+        for(shape e : shapes){
             e.movexPos(amount);
             e.moveyPos(amount);
         }

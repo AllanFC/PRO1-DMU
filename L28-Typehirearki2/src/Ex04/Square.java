@@ -1,6 +1,6 @@
 package Ex04;
 
-public class Square extends Figur{
+public class Square extends shape {
     private int sideLength;
 
     public Square(int xPos, int yPos, int sideLength){

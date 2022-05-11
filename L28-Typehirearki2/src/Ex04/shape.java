@@ -1,10 +1,10 @@
 package Ex04;
 
-public abstract class Figur {
+public abstract class shape {
     private int xPos;
     private int yPos;
 
-    public Figur(int Xpos, int yPos){
+    public shape(int Xpos, int yPos){
         this.xPos = Xpos;
         this.yPos = yPos;
     }

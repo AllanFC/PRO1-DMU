@@ -1,6 +1,6 @@
 package Ex04;
 
-public class Eclipse extends Figur{
+public class Eclipse extends shape {
     private int radius1;
     private int radius2;
 
