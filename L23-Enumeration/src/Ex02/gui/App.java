@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 public class App {
     public static void main(String[] args) {
         initStorage();
-        Application.launch(Gui.class);
     }
     public static void initStorage(){
         Event dota = Controller.createEvent("Dota 2 tournament", true);
