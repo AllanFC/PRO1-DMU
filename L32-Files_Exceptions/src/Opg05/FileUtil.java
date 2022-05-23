@@ -14,7 +14,7 @@ public class FileUtil {
 
     public int max(String fileName){
         int max = 0;
-        File in = new File(filePath + "/" + fileName + ".txt");
+        File in = new File(filePath + "/" + fileName);
         try(Scanner scanner = new Scanner(in)){
             max = scanner.nextInt();
             while(scanner.hasNextInt()){
@@ -31,7 +31,7 @@ public class FileUtil {
 
     public int min(String fileName){
         int min = 0;
-        File in = new File(filePath + "/" + fileName + ".txt");
+        File in = new File(filePath + "/" + fileName);
         try(Scanner scanner = new Scanner(in)){
             min = scanner.nextInt();
             while(scanner.hasNextInt()){
@@ -49,7 +49,7 @@ public class FileUtil {
     public double average(String fileName) throws IOException{
         double sum = 0;
         int counter = 0;
-        File in = new File(filePath + "/" + fileName + ".txt");
+        File in = new File(filePath + "/" + fileName);
         try(Scanner scanner = new Scanner(in)){
             while(scanner.hasNextInt()){
                 int d = scanner.nextInt();

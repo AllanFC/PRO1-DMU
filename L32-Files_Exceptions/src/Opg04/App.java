@@ -12,7 +12,7 @@ public class App {
 
         try (Scanner scanner = new Scanner(System.in);
              PrintWriter writer = new PrintWriter(out)) {
-            System.out.println("Type a decimal number: (end with -1)");
+            System.out.println("Enter an interger number: (end with -1)");
             boolean finished = false;
             while (!finished) {
                 try {
