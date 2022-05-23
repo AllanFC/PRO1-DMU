@@ -56,8 +56,6 @@ public class FileUtil {
                 sum += d;
                 counter++;
             }
-        } catch(IOException ex){
-            throw new IOException("Hej jeg er en fejl");
         }
         return sum / counter;
     }
