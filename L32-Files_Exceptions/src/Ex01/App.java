@@ -1,5 +1,6 @@
 package Ex01;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -10,8 +11,15 @@ public class App {
             while (index < 0 || index > 9) {
                 System.out.println("Type in an index (0..9): ");
                 index = scanner.nextInt();
-                System.out.printf("Prime at index %d is %d", index, primes[index]);
+                if(index >=0 && index <= 9){
+                    System.out.printf("Prime at index %d is %d", index, primes[index]);
+                } else {
+                    System.out.println("Index out of bounds. Type another between 0..9");
+                }
+
             }
+        } catch (InputMismatchException e){
+            System.out.println("Input was not an integer");
         }
     }
 }
