@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Spiller {
     private String name;
     private int year;
-    private final ArrayList<Detagelse> participations = new ArrayList<>();
+    private final ArrayList<Deltagelse> participations = new ArrayList<>();
 
     public Spiller(String name, int year) {
         this.name = name;
@@ -19,18 +19,22 @@ public class Spiller {
     public int getYear() {
         return year;
     }
+    public void Participating(Deltagelse deltagelse){
+        participations.add(deltagelse);
+        deltagelse.player = this;
+    }
 
-    public ArrayList<Detagelse> getParticipation() {
+    public ArrayList<Deltagelse> getParticipation() {
         return new ArrayList<>(participations);
     }
 
     public double kampHonorar(){
-        int gamesParticipated = 0;
-        for(Detagelse e : participations){
+        int matchesParticipated = 0;
+        for(Deltagelse e : participations){
             if(!e.isCanceled()){
-                gamesParticipated++;
+                matchesParticipated++;
             }
         }
-        return gamesParticipated * 10;
+        return matchesParticipated * 10;
     }
 }

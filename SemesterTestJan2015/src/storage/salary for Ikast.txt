@@ -1,0 +1,4 @@
+Jane Jensen	10.00 
+Lene Hansen	20.00 
+Mette Petersen	20.00 
+Maria Nielsen	55.00 

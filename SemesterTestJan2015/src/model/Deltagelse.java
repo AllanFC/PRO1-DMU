@@ -1,14 +1,14 @@
 package model;
 
-public class Detagelse {
+public class Deltagelse {
     private boolean canceled;
     private String reason;
-    private Spiller player;
+    Spiller player;
 
-    Detagelse(boolean canceled, String reason, Spiller player) {
+    Deltagelse(boolean canceled, String reason) {
         this.canceled = canceled;
         this.reason = reason;
-        this.player = player;
+        this.player = null;
     }
 
     public boolean isCanceled() {
@@ -17,5 +17,10 @@ public class Detagelse {
 
     public String getReason() {
         return reason;
+    }
+
+    @Override
+    public String toString() {
+        return player.getName() + "\t" + reason;
     }
 }
