@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Intern_test/Intern_test.iml" filepath="$PROJECT_DIR$/Intern_test/Intern_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/L02_L03-Shapes/L02_L03-Shapes.iml" filepath="$PROJECT_DIR$/L02_L03-Shapes/L02_L03-Shapes.iml" />
       <module fileurl="file://$PROJECT_DIR$/L04-Classes/L04-Classes.iml" filepath="$PROJECT_DIR$/L04-Classes/L04-Classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/L05-Typer/L05-Typer.iml" filepath="$PROJECT_DIR$/L05-Typer/L05-Typer.iml" />
